@@ -1,0 +1,411 @@
+@import './colors';
+@import './animate';
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+html {
+    scroll-padding-top: 82px;
+}
+
+.shadow-bg {
+    background-color: #333;
+    
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.underline {
+    margin: 0 auto 40px;
+    width: 120px;
+    height: 4px;
+    background-color: $main_color;
+}
+
+nav {
+    text-transform: uppercase;
+    z-index: 1;
+    width: 100%;
+    transition: background-color 0.6s;
+    background-color: #333;
+    .nav-link, .navbar-brand {
+       color: #fff;
+    }
+
+    .nav-link:hover, .navbar-brand:hover {
+        color: $main_color;
+    }
+
+
+    .navbar-toggler{
+        border:none;
+        padding: 8px 10px;
+
+        .fa-bars {
+            font-size: 24px;
+            color: #fff;
+        }
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+
+        span.title-zone {
+        color: $main_color;
+        }
+    }
+
+    .navbar-nav .nav-link.active {
+        color:$main_color;
+    }
+
+}
+
+header {
+    color: rgb(255, 255, 255);
+    position: relative;
+    height: 100vh;
+    width: 100%;
+
+    .hero-img {
+        position: relative;
+        height: 100vh;
+        background-image: url('../img/hero-img-big.jpg');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        z-index: 0;
+
+        .hero-shadow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(236, 175, 185, 0.1);
+            z-index: -1;
+        }
+
+        .hero-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            padding: 15px;
+            text-align: center;
+            z-index: 4;
+
+            h1 {
+                text-transform: uppercase;
+                font-weight: bold;
+                text-shadow: 2px 2px 5px rgb(224, 145, 112);
+            }
+
+            p {
+                text-shadow: 1px 1px 5px rgb(228, 148, 124);
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .btn-outline-light {
+                text-transform: uppercase;
+                font-weight: 600;
+                border-width: 3px;
+                z-index: 10;
+            }
+
+        }
+        
+        .fa-chevron-down {
+            position: absolute;
+            bottom:20px;
+            left:50%;
+            transform:translateX(-50%);
+            font-size: 30px;
+            text-decoration: none;
+            color: #fff;
+        }
+        
+    }
+
+    
+}
+
+.aboutus {
+    i {
+        margin-top: 20px;
+        font-size: 30px;
+    }
+
+    .aboutus-card-title {
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+    .aboutus-card-text {
+        font-size: 14px;
+    }
+
+    .aboutus-hover:hover {
+        color: $main_color;
+    }
+}
+
+.aboutus-hero {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/aboutus-cake-big.jpg');
+    background-position: center;
+    background-size: cover;
+    // background-attachment: fixed;
+    z-index: 0;
+    color: #fff;
+
+    .aboutus-shadow {
+        position:absolute;
+        top:0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0,.5);
+        z-index: -1;
+    }
+
+    .aboutus-hero-item {
+        i.fa-solid {
+            font-size: 28px;
+        }
+
+        .aboutus-hero-title {
+            font-size: 24px;
+        }
+
+        .btn {
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            color: #fff;
+            background-color: $main_color;
+        }
+
+    }
+}
+
+.portfolio {
+
+    .carousel-item {
+        height: 600px;
+        
+        .text-frame {
+            right: 0;
+            left: 0;
+            padding: 40px 0;
+            background-color: rgba(0,0,0,.7);
+        }
+    }
+
+    .carousel-indicators {
+        padding-bottom: 20px;
+    }
+}
+
+.prices-item {
+    transition: transform 0.3s ;
+
+    h3 {
+        text-transform: uppercase;
+    }
+
+    hr{
+        max-width: 300px;
+    }
+
+    span {
+        font-weight: bold;
+    }
+
+    span.link {
+        font-weight: normal;
+        color: $main_color;
+        text-decoration: underline;
+    }
+
+    .btn {
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: $main_color;
+    }
+
+    .btn:hover {
+        color: #fff;
+        background-color:  rgb(214, 111, 128);
+    }
+
+}
+
+.prices-item:hover {
+    transform: scale(1.08);
+}
+
+.team {
+    position: relative;
+    background-image: url('../img/team-hero-img-big.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+
+    h2{
+        color: #fff;
+    }
+
+    .hero-shadow{
+        position:absolute;
+        top:0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0,.3);
+        z-index: -5;
+    }
+
+    .card {
+        transition: transform .3s;
+        img {
+            height: 300px;
+            object-position:50% 10%;
+            object-fit:cover;
+        }
+
+        a {
+            color:$main_color;
+            text-decoration: none; 
+        }
+    }
+
+    .card:hover {
+        transform: scale(0.96);
+    }
+
+    .card-title {
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .card-body {
+        height: 160px;
+    }
+}
+
+
+.achievements {   
+    .achievements-item {
+        margin-top: 20px;
+    } 
+
+    i {
+        padding: 10px;
+        font-size: 40px;
+        color: #fff;
+        text-shadow: 0 0 5px #000;
+    }
+    
+    .achievment-numer {
+        padding: 10px;
+        font-size: 22px;
+    }
+}
+
+.contact {
+    background-color: rgb(252, 240, 240);
+
+    .contact-title {
+        margin-top: 25px;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        
+    }
+}
+
+.footer {
+    position: relative;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+
+    div{
+        position: absolute;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+
+    .fab {
+        margin: 10px;
+        padding: 8px;
+        text-decoration: none;
+        border-radius: 100%;
+        color: #fff;
+        background-color: $main_color;
+    }
+
+    .fa-facebook-f {
+        padding: 8px 11px;
+    }
+
+    .fa-instagram {
+        padding: 8px 10px;
+    }  
+    
+}
+
+@media (max-width: 576px) {
+   header .hero-img .hero-text {
+        p {
+            font-size: 16px;
+            font-weight: normal;
+        }
+    }
+}
+
+@media(max-width:992px) {
+    .aboutus-hero-item {
+        margin-top: 30px;
+    }
+
+    .aboutus-hero .aboutus-hero-item .btn {
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+
+    .portfolio {
+
+        .card {
+            margin:20px;
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    header .hero-img {
+        background-image: url('../img/hero-img-small.jpg');
+    }
+}
+
+@media(min-width:992px) {
+    nav {
+        height: 82px;
+    }
+}
